@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiko&family=Inter&family=Poppins&family=Righteous&family=Roboto&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ishita.css">
+</head>
+
+<body>
+    <div class="container">
+    <h1>Working Contact Form</h1>
+    <div class="main">
+    <form action="">
+        <div class="form-input">
+            <label for="">Name</label><br>
+            <input type="text" placeholder="Enter name">
+        </div>
+        <div class="form-input">
+            <label for="">Email</label><br>
+            <input type="email" placeholder="Enter email">
+        </div>
+        <div class="form-input">
+            <label for="">Contact Number</label><br>
+            <input type="number" placeholder="Enter contact number">
+        </div>
+        <div class="form-input">
+            <label for="">Subject</label><br>
+            <input type="text" placeholder="Enter your subject">
+        </div>
+        <div class="form-input">
+            <label for="">Message</label><br>
+            <textarea name="" id="" cols="36" rows="5" placeholder="Enter your message here..."></textarea>
+        </div>
+        <div class="form-input">
+            <button type="button" onclick="SendEmail()">Send Email</button>
+        </div>
+    </form>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function SendEmail(){
+
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "211529@juitsolan.in",
+                Password : "E639C381FC921A75FE7579C9B3323E2FF4E9",
+                To : '211529@juitsolan.in',
+                To : '211355@juitsolan.in',
+                From : "211529@juitsolan.in",
+                Subject : "This is the subject",
+                Body : "And this is the body"
+                 }).then(
+              message => alert(message)
+            );
+            
+            }
+    </script>
+</div>   
+</body>
+</html>
